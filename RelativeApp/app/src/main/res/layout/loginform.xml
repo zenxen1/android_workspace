@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/backgraund">
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ece10b"
+        android:text="로그인"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/idtext"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/login"
+        android:text="ID"
+        android:textSize="30dp"
+        android:textColor="#ece10b"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/idedit"
+        android:layout_marginBottom="9dp"
+        android:layout_alignLeft="@id/login"
+        android:layout_below="@id/login"
+        android:background="#ece10b"
+        android:layout_width="200dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/idtext"
+        android:text="패스워드"
+        android:textSize="30dp"
+        android:textColor="#ece10b"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/passedit"
+        android:layout_alignLeft="@id/idedit"
+        android:layout_below="@id/idedit"
+        android:background="#ece10b"
+        android:layout_width="200dp"
+        android:layout_height="30dp" />
+
+    <Button
+        android:layout_below="@id/passedit"
+        android:layout_alignRight="@id/passedit"
+        android:text="취소"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="로그인"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/passedit"
+        android:layout_alignLeft="@+id/passedit"/>
+
+</RelativeLayout>

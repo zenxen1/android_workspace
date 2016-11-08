@@ -1,0 +1,10 @@
+1.java jdk 설치를 전제로 한다.
+2.java_home 환경변수 등록
+  bin를 포함한 직전경로
+3. 
+
+스윙 컴포넌트 (Jcomponent)
+
+안  뷰(view)  -- 그룹형 (view group)  --배치관리자 (linear, frame, absolute, grid)
+                                              l--단순
+                -- 일반형 사용자 (widget)
