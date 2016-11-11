@@ -1,0 +1,36 @@
+{
+  "musicList":[
+    {
+      "title":"updown",
+      "artist":"exid",
+      "file": "a.mp3"
+    },
+    {
+      "title":"다시만난세계",
+      "artist":"길",
+      "file": "b.mp3"
+    },
+    {
+      "title":"나팔바지",
+      "artist":"싸이",
+      "file": "c.mp3"
+    },
+    {
+      "title":"오빠바지",
+      "artist":"어머나",
+      "file": "d.mp3"
+    },
+    {
+      "title":"오빠믿어바",
+      "artist":"아냐",
+      "file": "e.mp3"
+    },
+    {
+      "title":"ㅋㅋ",
+      "artist":"ㅋㅋ",
+      "file": "f.mp3"
+    }
+  ]
+}
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:onClick="btnClick">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="아저씨"
+            style="@style/music_item"/>
+        <TextView
+            android:id="@+id/txt_artist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="싸이"
+            style="@style/music_item"/>
+
+        <TextView
+            android:id="@+id/txt_file"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="a.mp3"
+            style="@style/music_item"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:src="@drawable/play"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="60dp">
+
+    </ImageView>
+
+</LinearLayout>

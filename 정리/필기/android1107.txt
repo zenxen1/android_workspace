@@ -11,3 +11,39 @@
                 -- 일반형 사용자 (widget)
 1109(3일차)----------------------------------------------------------------------------------
 순수자바코드로도 뷰 작성 가능...xml과 섞어서 써야 한다
+
+1110(4일차)----------------------------------------------------------------------------------
+View 
+두개이상의 화면을 구성해 보았다!!!
+->
+안드로이드의 주요 컴포넌트
+Activity 
+Broadcast Receiver (시스템이 방송하는 정보를 받아내는 컴포넌트)
+Service
+Content Provider 
+
+<intend>
+
+Activity (Controller)
+setContentView (대상뷰, xml);
+
+<inflater>
+안드로디드의 데이터를 보여주기에 최적화된 뷰의 종류
+<AdapterView>
+ListView
+GridView
+Spinner
+Gallery (Deprecaated......)
+1111(5일차)--------------------------------------------------------------
+복합위젯
+LayoutInflater
+아이폰/안드로이드 데이터를 보여주기에 가장 적합한 전용 뷰는?
+AdapterView == JTable-Tablecontroller 메모리 효율성이 좋다!!
+ListView	Adapter
+GridView
+Spinner
+res-->
+R.java
+상수
+android.R.simple_list_1
+-----------------------------------------------------------------------------
