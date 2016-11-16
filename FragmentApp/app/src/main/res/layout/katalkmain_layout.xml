@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_a"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFDD00"
+            android:text="A"
+            android:onClick="btnClick"/>
+
+
+        <Button
+            android:id="@+id/bt_b"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#d92161"
+            android:text="B"
+            android:onClick="btnClick"/>
+
+        <Button
+            android:id="@+id/bt_c"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#203db1"
+            android:text="C"
+            android:onClick="btnClick"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/container"
+            android:layout_weight="7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <fragment
+
+                android:name="com.sds.study.fragmentapp.katalk.YellowFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+
+</LinearLayout>
