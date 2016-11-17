@@ -19,17 +19,31 @@ public class KatalkMain extends FragmentActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.katalkmain_layout);
 
-        Fragment red = new RedFragment();
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.container,red);
-        transaction.commit();
     }
 
     public void btnClick(View view) {
         switch (view.getId()) {
-            case R.id.bt_a:;
-            case R.id.bt_b:;
-            case R.id.bt_c:;
+            case R.id.bt_a:yelf();break;
+            case R.id.bt_b:redf();break;
+            case R.id.bt_c:bulf();
         }
+    }
+    public void yelf(){
+        Fragment yel = new YellowFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.container,yel);
+        transaction.commit();
+    }
+    public void bulf(){
+        Fragment bul = new BlueFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.container,bul);
+        transaction.commit();
+    }
+    public void redf(){
+        Fragment red = new RedFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.container,red);
+        transaction.commit();
     }
 }
