@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/android,java,maven,eclipse
+# Created by https://www.gitignore.io/api/android,eclipse,java,maven,opencv
 
 ### Android ###
 # Built application files
@@ -52,21 +52,6 @@ captures/
 gen-external-apklibs
 
 
-### Maven ###
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-
-# Exclude maven wrapper
-!/.mvn/wrapper/maven-wrapper.jar
-
-
 ### Eclipse ###
 
 .metadata
@@ -117,6 +102,31 @@ tmp/
 
 # Code Recommenders
 .recommenders/
+
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Exclude maven wrapper
+!/.mvn/wrapper/maven-wrapper.jar
+
+
+### OpenCV ###
+#OpenCV for Mac and Linux
+#build and release folders
+*/CMakeFiles
+*/CMakeCache.txt
+*/Makefile
+*/cmake_install.cmake
+.DS_Store
 
 
 ### Java ###
