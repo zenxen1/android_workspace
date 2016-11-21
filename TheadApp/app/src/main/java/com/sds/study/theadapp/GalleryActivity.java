@@ -100,9 +100,9 @@ public class GalleryActivity extends Activity implements Runnable{
                 if(count==8){
                     count=0;
                 }
-                openGallery();
+                /*openGallery();
                 galleryView.bitmap = bitmap;
-                galleryView.invalidate();
+                galleryView.invalidate();*/
             }
         };
 
