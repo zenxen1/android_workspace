@@ -1,6 +1,8 @@
 package com.sds.study.toobarserver;
 
 import android.bluetooth.BluetoothSocket;
+import android.os.Bundle;
+import android.os.Message;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,12 +16,14 @@ import java.io.OutputStreamWriter;
  */
 
 public class ServerThread extends Thread{
+    MainActivity mainActivity;
     boolean flag = true;
     BluetoothSocket socket;
     BufferedReader buffr;
     BufferedWriter buffw;
 
-    public ServerThread(BluetoothSocket socket) {
+    public ServerThread(MainActivity mainActivity,BluetoothSocket socket) {
+        this.mainActivity=mainActivity;
         this.socket = socket;
         try {
             buffr = new BufferedReader(new InputStreamReader(socket.getInputStream(),"utf-8"));
@@ -34,6 +38,12 @@ public class ServerThread extends Thread{
         while (flag){
             try {
                 String msg = buffr.readLine();
+                /*서버의 정보창에 클라이언트의 메세지 출력*/
+                Message message = new Message();
+                Bundle bundle = new Bundle();
+                bundle.putString("msg",msg);
+                message.setData(bundle);
+                mainActivity.handler.sendMessage(message);
                 send(msg);
             } catch (IOException e) {
                 e.printStackTrace();

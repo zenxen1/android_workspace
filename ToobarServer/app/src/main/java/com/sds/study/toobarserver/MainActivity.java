@@ -26,11 +26,13 @@ public class MainActivity extends AppCompatActivity {
     String serviceName;
     Thread acceptThread;/*접속자를 받기위한 쓰레드*/
     Handler handler;
+    MainActivity mainActivity;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mainActivity=this;
         setContentView(R.layout.activity_main);
 
         txt_status = (TextView)findViewById(R.id.txt_status);
@@ -94,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         acceptThread = new Thread(){
-            public void run(){
-                try {
+                    public void run(){
+                        try {
                     Message message = new Message();
                     Bundle bundle = new Bundle();
                     bundle.putString("msg","서버준비됨\n");
@@ -110,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
                     message2.setData(bundle2);
                     handler.sendMessage(message2);
 
-                    ServerThread st = new ServerThread(socket);
-                    //st.start();
+                    ServerThread st = new ServerThread(mainActivity,socket);
+                    st.start();
                     /*더이상 접속자 허용 방지*/
                     server.close();//서버프로그램을 중단하는것이아니라 접속자의 접속을 원천 차단이 목적임 NO 오해!
                 } catch (IOException e) {
@@ -120,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         acceptThread.start();
-    }
+}
     /*클라이언트가 서버인 나를 발견할 수있도록 검색 허용 옵션을 지정하자..*/
     public void requestDiscoverable(){
         Intent intent = new Intent();

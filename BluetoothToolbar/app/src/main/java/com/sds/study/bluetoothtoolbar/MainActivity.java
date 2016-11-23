@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -21,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,15 +41,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Button bt_scan;
     BroadcastReceiver receiver;
     ListView listView;
+    TextView txt_receive;
+    EditText txt_send;
     DeviceListAdapter deviceListAdapter;
     /*해당 디바이스에 접속하기 위해서는 소켓이 필요*/
     BluetoothSocket socket;/*대화용소켓*/
     String UUID = "50bb0c7c-f365-4c32-9fdb-5ce3cf480863";
     Thread connectThread;
+    Handler handler;
+    ClientThread clientThread;
+    MainActivity mainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mainActivity= this;
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         /*이 툴바를 설정하자!! 즉 이시점부터 메뉴를 얹힌다거나, 네이게이션 버튼을 적용할수도 있는 시점*/
@@ -54,12 +63,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         bt_scan = (Button)findViewById(R.id.bt_scan);
         listView = (ListView)findViewById(R.id.listView);
+        txt_receive = (TextView)findViewById(R.id.txt_receive);
+        txt_send=(EditText)findViewById(R.id.txt_send);
+
         deviceListAdapter = new DeviceListAdapter(this);
         listView.setAdapter(deviceListAdapter);
         listView.setOnItemClickListener(this);
 
         checkSupportBluetooth();
         requestActiveBluetooth();
+
+        handler = new Handler(){
+            public void handleMessage(Message message) {
+                /*서버가 보낸 메세지 반영하기*/
+                Bundle bundle = message.getData();
+                String msg = bundle.getString("msg");
+                txt_receive.setText(msg);
+            }
+        };
 
 
         receiver = new BroadcastReceiver() {
@@ -192,8 +213,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch(view.getId()){
             case R.id.bt_scan:
                 checkAccessPermission();
-                ;break;
-            case R.id.bt_send:;break;
+                break;
+            case R.id.bt_send:
+                String msg = txt_send.getText().toString();
+                Toast.makeText(mainActivity, msg, Toast.LENGTH_SHORT).show();
+                clientThread.send(msg);
+                break;
         }
     }
 
@@ -208,6 +233,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         try {
             socket=device.createInsecureRfcommSocketToServiceRecord(java.util.UUID.fromString(UUID));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -217,12 +243,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void run() {
                 try {
                     socket.connect();
+                    clientThread = new ClientThread(mainActivity,socket);
+                    clientThread.start();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         };
         connectThread.start();
+
     }
 
     /*7원하는 디바이스를 선택한후, 그 디바이스를 이용하여 접속을 시도 하겟씀*/
