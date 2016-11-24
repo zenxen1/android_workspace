@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_chat"
+        android:icon="@drawable/chatting"
+        android:title="채팅"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/menu_config"
+        android:icon="@drawable/config"
+        android:title="환경설정"
+        app:showAsAction="ifRoom"></item>
+
+</menu>

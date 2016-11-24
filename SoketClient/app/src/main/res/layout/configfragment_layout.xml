@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <EditText
+        android:id="@+id/txt_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="34.43.34.34"
+        style="@style/configstyle" />
+
+    <EditText
+        android:id="@+id/txt_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="9090"
+        style="@style/configstyle"/>
+
+    <EditText
+        android:id="@+id/txt_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="방사능토토로"
+        style="@style/configstyle"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/deadpool"/>
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="적용"/>
+
+</LinearLayout>
