@@ -38,8 +38,8 @@ public class MyOpenHelper extends SQLiteOpenHelper{
             Log.d(TAG,"DBL 생성성공");
             chatDAO = new ChatDAO(db);
             Chat chat = new Chat();
-            chat.setIp("192.168.0.35");
-            chat.setPort("9090");
+            chat.setIp("192.168.0.12");
+            chat.setPort("9999");
             chat.setNickname("brain");
             chat.setImg("punisher.png");
 

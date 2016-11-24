@@ -2,6 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/menu_connect"
+        android:icon="@drawable/connect"
+        android:title="접속"
+        app:showAsAction="always"></item>
+
+    <item
         android:id="@+id/menu_chat"
         android:icon="@drawable/chatting"
         android:title="채팅"
