@@ -126,7 +126,7 @@
 
 			   
 
-      <Context docBase="AndroidWeb" path="/AndroidWeb" reloadable="true" source="org.eclipse.jst.jee.server:AndroidWeb"/></Host>
+      <Context docBase="AndroidWeb" path="/AndroidWeb" reloadable="true" source="org.eclipse.jst.jee.server:AndroidWeb"/><Context docBase="AndroidServer" path="/" reloadable="true" source="org.eclipse.jst.jee.server:AndroidServer"/></Host>
     </Engine>
   </Service>
 </Server>
