@@ -102,9 +102,9 @@ public class MyAdapter extends BaseAdapter{
             view = item;
         }else{//이미채워진경우라면 같은 view로 대채한다....
             MovieItem item = (MovieItem)convertView;
-            item.setData(movie);
-            view = item;
-        }
+        item.setData(movie);
+        view = item;
+    }
 
         return view;
     }
