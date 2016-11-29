@@ -112,3 +112,6 @@ thread는 ajax와 비슷하다
 AsyncTask = ajax
 AndroidServer
 AsyncApp
+1128(16일차)-------------------------------------------------------------------------------------
+RFID > 하부기술 NFC
+NDEF
