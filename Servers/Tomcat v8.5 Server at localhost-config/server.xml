@@ -145,7 +145,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       
-      <Context docBase="Uploadserver" path="/" reloadable="true" source="org.eclipse.jst.jee.server:Uploadserver"/></Host>
+      <Context docBase="Uploadserver" path="/Uploadserver" reloadable="true" source="org.eclipse.jst.jee.server:Uploadserver"/><Context docBase="GoogleMapServer" path="/" reloadable="true" source="org.eclipse.jst.jee.server:GoogleMapServer"/></Host>
     </Engine>
   </Service>
 </Server>
