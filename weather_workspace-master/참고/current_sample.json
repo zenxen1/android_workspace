@@ -1,0 +1,86 @@
+{
+    "response": {
+        "header": {
+            "resultCode": "0000",
+            "resultMsg": "OK"
+        },
+        "body": {
+            "items": {
+                "item": [{
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "LGT",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 0
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "PTY",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 0
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "REH",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 36
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "RN1",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 0
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "SKY",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 1
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "T1H",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 1.8
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "UUU",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 2.1
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "VEC",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 321
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "VVV",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": -2.5
+                }, {
+                    "baseDate": 20161201,
+                    "baseTime": 2000,
+                    "category": "WSD",
+                    "nx": 60,
+                    "ny": 127,
+                    "obsrValue": 3.3
+                }]
+            },
+            "numOfRows": 12,
+            "pageNo": 1,
+            "totalCount": 10
+        }
+    }
+}

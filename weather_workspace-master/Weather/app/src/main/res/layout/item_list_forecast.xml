@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <!-- 날짜 -->
+    <TextView
+        android:id="@+id/txt_fcstDate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="00시 00분"
+        android:textSize="15sp" />
+
+    <!-- 날씨 아이콘 -->
+    <ImageView
+        android:id="@+id/img_sky"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/sun" />
+
+    <!-- 강수확률 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/umbrella" />
+
+        <TextView
+            android:id="@+id/txt_pop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:hint="00%"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name" translatable="false">Weather</string>
+
+    <string name="pref_unit_title">온도</string>
+    <string name="pref_unit_key" translatable="false">unit</string>
+    <string name="pref_unit_default" translatable="false">ºC</string>
+    <string name="pref_unit_celsius" translatable="false">ºC</string>
+    <string name="pref_unit_fahrenheit" translatable="false">ºF</string>
+
+    <string name="pref_location_title">지역</string>
+    <string name="pref_location_key">location</string>
+    <string name="pref_location_default">1</string>
+    <string name="title_activity_search">지역 검색</string>
+    <string name="title_activity_settings">설정</string>
+</resources>

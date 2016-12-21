@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_change"
+        android:icon="@android:drawable/ic_search_category_default"
+        android:title="지역 변경"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|never" />
+
+    <item
+        android:id="@+id/action_sync"
+        android:icon="@android:drawable/stat_notify_sync"
+        android:title="새로고침"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_bluetooth_connect"
+        android:icon="@android:drawable/stat_sys_data_bluetooth"
+        android:title="블루투스 연결"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Settings"
+        app:showAsAction="never" />
+
+</menu>

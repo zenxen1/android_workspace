@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hint="지역을 입력하세요"
+    android:label="지역 검색">
+
+</searchable>
